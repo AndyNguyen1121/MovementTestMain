@@ -3,32 +3,72 @@
   "WorkspaceRootPath": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|e:\\unity projects\\movementtestmain\\movementtest\\assets\\player\\scripts\\combatstatemachine\\combatstates\\combatstatefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|e:\\unity projects\\movementtestmain\\movementtest\\assets\\player\\scripts\\combatstatemachine\\combatstates\\fistattack2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\scripts\\combatstatemachine\\combatstates\\fistattack2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|E:\\Unity Projects\\MovementTestMain\\MovementTest\\assets\\player\\scripts\\combatstatemachine\\combatstates\\fistattack3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\scripts\\combatstatemachine\\combatstates\\fistattack3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|E:\\Unity Projects\\MovementTestMain\\MovementTest\\assets\\player\\scripts\\playeranimationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\scripts\\playeranimationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|E:\\Unity Projects\\MovementTestMain\\MovementTest\\assets\\player\\scripts\\combatstatemachine\\combatstates\\fistattack1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\scripts\\combatstatemachine\\combatstates\\fistattack1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|E:\\Unity Projects\\MovementTestMain\\MovementTest\\assets\\player\\scripts\\combatstatemachine\\combatstates\\combatstatefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\scripts\\combatstatemachine\\combatstates\\combatstatefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|E:\\Unity Projects\\MovementTestMain\\MovementTest\\assets\\player\\scripts\\combatstatemachine\\combatstates\\combatidle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\scripts\\combatstatemachine\\combatstates\\combatidle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|E:\\Unity Projects\\MovementTestMain\\MovementTest\\assets\\player\\scripts\\combatstatemachine\\playercombatstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\scripts\\combatstatemachine\\playercombatstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|E:\\Unity Projects\\MovementTestMain\\MovementTest\\assets\\player\\scripts\\resetvalues.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\scripts\\resetvalues.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|E:\\Unity Projects\\MovementTestMain\\MovementTest\\assets\\player\\scripts\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\scripts\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|E:\\Unity Projects\\MovementTestMain\\MovementTest\\assets\\player\\scripts\\playermovementmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\scripts\\playermovementmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|E:\\Unity Projects\\MovementTestMain\\MovementTest\\assets\\footik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|solutionrelative:assets\\footik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|E:\\Unity Projects\\MovementTestMain\\MovementTest\\assets\\player\\scripts\\playerinputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\scripts\\playerinputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|E:\\Unity Projects\\MovementTestMain\\MovementTest\\assets\\enablefootikinanimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|solutionrelative:assets\\enablefootikinanimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|E:\\Unity Projects\\MovementTestMain\\MovementTest\\assets\\player\\scripts\\combatstatemachine\\non-monobehavior\\playerbasestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\scripts\\combatstatemachine\\non-monobehavior\\playerbasestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|E:\\Unity Projects\\MovementTestMain\\MovementTest\\assets\\resetvalues.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|solutionrelative:assets\\resetvalues.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|E:\\Unity Projects\\MovementTestMain\\MovementTest\\assets\\player\\scripts\\playerobstacleinteractions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\scripts\\playerobstacleinteractions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|E:\\Unity Projects\\MovementTestMain\\MovementTest\\assets\\playerobstacleinteractions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|solutionrelative:assets\\playerobstacleinteractions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|E:\\Unity Projects\\MovementTestMain\\MovementTest\\assets\\player\\scripts\\combatstatemachine\\combatstates\\combatidle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\scripts\\combatstatemachine\\combatstates\\combatidle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|E:\\Unity Projects\\MovementTestMain\\MovementTest\\assets\\player\\scripts\\footik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\scripts\\footik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\EnableFootIKInAnimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\EnableFootIKInAnimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\PlayerObstacleInteractions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PlayerObstacleInteractions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\FootIK.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\FootIK.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 511,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,68 +98,187 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FistAttack3.cs",
+              "DocumentMoniker": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\CombatStateMachine\\CombatStates\\FistAttack3.cs",
+              "RelativeDocumentMoniker": "Assets\\Player\\Scripts\\CombatStateMachine\\CombatStates\\FistAttack3.cs",
+              "ToolTip": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\CombatStateMachine\\CombatStates\\FistAttack3.cs",
+              "RelativeToolTip": "Assets\\Player\\Scripts\\CombatStateMachine\\CombatStates\\FistAttack3.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAB4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T03:53:55.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerAnimationManager.cs",
+              "DocumentMoniker": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\PlayerAnimationManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Player\\Scripts\\PlayerAnimationManager.cs",
+              "ToolTip": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\PlayerAnimationManager.cs",
+              "RelativeToolTip": "Assets\\Player\\Scripts\\PlayerAnimationManager.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAiwD4AAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T01:23:09.327Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "FistAttack2.cs",
+              "DocumentMoniker": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\CombatStateMachine\\CombatStates\\FistAttack2.cs",
+              "RelativeDocumentMoniker": "Assets\\Player\\Scripts\\CombatStateMachine\\CombatStates\\FistAttack2.cs",
+              "ToolTip": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\CombatStateMachine\\CombatStates\\FistAttack2.cs",
+              "RelativeToolTip": "Assets\\Player\\Scripts\\CombatStateMachine\\CombatStates\\FistAttack2.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T00:52:19.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PlayerManager.cs",
+              "DocumentMoniker": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\PlayerManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Player\\Scripts\\PlayerManager.cs",
+              "ToolTip": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\PlayerManager.cs",
+              "RelativeToolTip": "Assets\\Player\\Scripts\\PlayerManager.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAQwF4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T00:49:05.239Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ResetValues.cs",
+              "DocumentMoniker": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\ResetValues.cs",
+              "RelativeDocumentMoniker": "Assets\\Player\\Scripts\\ResetValues.cs",
+              "ToolTip": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\ResetValues.cs",
+              "RelativeToolTip": "Assets\\Player\\Scripts\\ResetValues.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T00:38:56.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PlayerCombatStateMachine.cs",
+              "DocumentMoniker": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\CombatStateMachine\\PlayerCombatStateMachine.cs",
+              "RelativeDocumentMoniker": "Assets\\Player\\Scripts\\CombatStateMachine\\PlayerCombatStateMachine.cs",
+              "ToolTip": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\CombatStateMachine\\PlayerCombatStateMachine.cs",
+              "RelativeToolTip": "Assets\\Player\\Scripts\\CombatStateMachine\\PlayerCombatStateMachine.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T00:36:35.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FistAttack1.cs",
+              "DocumentMoniker": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\CombatStateMachine\\CombatStates\\FistAttack1.cs",
+              "RelativeDocumentMoniker": "Assets\\Player\\Scripts\\CombatStateMachine\\CombatStates\\FistAttack1.cs",
+              "ToolTip": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\CombatStateMachine\\CombatStates\\FistAttack1.cs",
+              "RelativeToolTip": "Assets\\Player\\Scripts\\CombatStateMachine\\CombatStates\\FistAttack1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T00:35:42.246Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PlayerInputManager.cs",
+              "DocumentMoniker": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\PlayerInputManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Player\\Scripts\\PlayerInputManager.cs",
+              "ToolTip": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\PlayerInputManager.cs",
+              "RelativeToolTip": "Assets\\Player\\Scripts\\PlayerInputManager.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAowMkAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T00:31:49.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "CombatStateFactory.cs",
               "DocumentMoniker": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\CombatStateMachine\\CombatStates\\CombatStateFactory.cs",
               "RelativeDocumentMoniker": "Assets\\Player\\Scripts\\CombatStateMachine\\CombatStates\\CombatStateFactory.cs",
               "ToolTip": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\CombatStateMachine\\CombatStates\\CombatStateFactory.cs",
               "RelativeToolTip": "Assets\\Player\\Scripts\\CombatStateMachine\\CombatStates\\CombatStateFactory.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T05:25:47.824Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-20T05:25:47.824Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CombatIdle.cs",
-              "DocumentMoniker": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\CombatStateMachine\\CombatStates\\CombatIdle.cs",
-              "RelativeDocumentMoniker": "Assets\\Player\\Scripts\\CombatStateMachine\\CombatStates\\CombatIdle.cs",
-              "ToolTip": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\CombatStateMachine\\CombatStates\\CombatIdle.cs",
-              "RelativeToolTip": "Assets\\Player\\Scripts\\CombatStateMachine\\CombatStates\\CombatIdle.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 10,
+              "Title": "PlayerBaseState.cs",
+              "DocumentMoniker": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\CombatStateMachine\\Non-Monobehavior\\PlayerBaseState.cs",
+              "RelativeDocumentMoniker": "Assets\\Player\\Scripts\\CombatStateMachine\\Non-Monobehavior\\PlayerBaseState.cs",
+              "ToolTip": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\CombatStateMachine\\Non-Monobehavior\\PlayerBaseState.cs",
+              "RelativeToolTip": "Assets\\Player\\Scripts\\CombatStateMachine\\Non-Monobehavior\\PlayerBaseState.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T05:25:47.245Z"
+              "WhenOpened": "2025-04-21T00:36:04.166Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "PlayerMovementManager.cs",
               "DocumentMoniker": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\PlayerMovementManager.cs",
               "RelativeDocumentMoniker": "Assets\\Player\\Scripts\\PlayerMovementManager.cs",
               "ToolTip": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\PlayerMovementManager.cs",
               "RelativeToolTip": "Assets\\Player\\Scripts\\PlayerMovementManager.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAAAqwFMAAAAAAAAA",
+              "ViewState": "AQIAAEIAAAAAAAAAAAASwE0AAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-20T04:59:34.504Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
+              "Title": "PlayerObstacleInteractions.cs",
+              "DocumentMoniker": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\PlayerObstacleInteractions.cs",
+              "RelativeDocumentMoniker": "Assets\\Player\\Scripts\\PlayerObstacleInteractions.cs",
+              "ToolTip": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\PlayerObstacleInteractions.cs",
+              "RelativeToolTip": "Assets\\Player\\Scripts\\PlayerObstacleInteractions.cs",
+              "ViewState": "AQIAAIYAAAAAAAAAAAASwLMAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T02:00:52.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FootIK.cs",
+              "DocumentMoniker": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\FootIK.cs",
+              "RelativeDocumentMoniker": "Assets\\Player\\Scripts\\FootIK.cs",
+              "ToolTip": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\FootIK.cs",
+              "RelativeToolTip": "Assets\\Player\\Scripts\\FootIK.cs",
+              "ViewState": "AQIAAG0AAAAAAAAAAIA1wIgAAAB0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T00:43:44.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CombatIdle.cs",
+              "DocumentMoniker": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\CombatStateMachine\\CombatStates\\CombatIdle.cs",
+              "RelativeDocumentMoniker": "Assets\\Player\\Scripts\\CombatStateMachine\\CombatStates\\CombatIdle.cs",
+              "ToolTip": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\CombatStateMachine\\CombatStates\\CombatIdle.cs",
+              "RelativeToolTip": "Assets\\Player\\Scripts\\CombatStateMachine\\CombatStates\\CombatIdle.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T05:25:47.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "EnableFootIKInAnimator.cs",
               "DocumentMoniker": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\EnableFootIKInAnimator.cs",
               "RelativeDocumentMoniker": "Assets\\EnableFootIKInAnimator.cs",
               "ToolTip": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\EnableFootIKInAnimator.cs",
               "RelativeToolTip": "Assets\\EnableFootIKInAnimator.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-20T04:52:37.246Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ResetValues.cs",
-              "DocumentMoniker": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\ResetValues.cs",
-              "RelativeDocumentMoniker": "Assets\\ResetValues.cs",
-              "ToolTip": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\ResetValues.cs",
-              "RelativeToolTip": "Assets\\ResetValues.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T04:31:07.496Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 15,
               "Title": "PlayerObstacleInteractions.cs",
               "DocumentMoniker": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\PlayerObstacleInteractions.cs",
               "RelativeDocumentMoniker": "Assets\\PlayerObstacleInteractions.cs",
@@ -131,7 +290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 16,
               "Title": "FootIK.cs",
               "DocumentMoniker": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\FootIK.cs",
               "RelativeDocumentMoniker": "Assets\\FootIK.cs",

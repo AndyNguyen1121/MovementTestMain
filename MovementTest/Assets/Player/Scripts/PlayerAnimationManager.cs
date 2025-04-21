@@ -46,7 +46,8 @@ public class PlayerAnimationManager : MonoBehaviour
         bool rotateTowardsPlayerInput = false,
         bool canRotate = false,
         bool canMove = false,
-        bool useGravity = true)
+        bool useGravity = true,
+        float normalizedTime = 0.1f)
     {
 
         if (rotateTowardsPlayerInput && playerInputManager.movementDirection != Vector2.zero)
@@ -57,10 +58,10 @@ public class PlayerAnimationManager : MonoBehaviour
             playerDirection.y = 0;
             playerDirection.Normalize();
 
-            StartCoroutine(SlerpDuringAction(Quaternion.LookRotation(playerDirection), 0.5f));
+            StartCoroutine(SlerpDuringAction(Quaternion.LookRotation(playerDirection), 0.05f));
             //playerManager.transform.rotation = Quaternion.LookRotation(playerDirection);
         }
-        animator.CrossFade(animationName, 0.1f);
+        animator.CrossFade(animationName, normalizedTime);
         playerManager.isPerformingAction = isPerformingAction;
         playerManager.playerMovementManager.canMove = canMove;
         playerManager.playerMovementManager.canRotate = canRotate;
@@ -71,10 +72,11 @@ public class PlayerAnimationManager : MonoBehaviour
     public IEnumerator SlerpDuringAction (Quaternion rotation, float dampTime)
     {
         float timer = 0;
+        Quaternion initalRotation = transform.rotation;
 
         while (timer < dampTime)
         {
-            playerManager.transform.rotation = Quaternion.Slerp(playerManager.transform.rotation, rotation, timer / dampTime);
+            playerManager.transform.rotation = Quaternion.Slerp(initalRotation, rotation, timer / dampTime);
             timer += Time.deltaTime;
             yield return null;
         }
@@ -96,7 +98,10 @@ public class PlayerAnimationManager : MonoBehaviour
             if (playerManager.playerMovementManager.useGravity)
                 velocity.y += playerManager.playerMovementManager.airGravityScale * Time.deltaTime;
 
-            playerManager.characterController.Move(velocity);
+            if (playerManager.characterController.enabled)
+            {
+                playerManager.characterController.Move(velocity);
+            }
         }
     }
 

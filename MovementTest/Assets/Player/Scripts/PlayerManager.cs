@@ -14,6 +14,7 @@ public class PlayerManager : MonoBehaviour
 
     [Header("Auto-Initizalized References")]
     public PlayerMovementManager playerMovementManager;
+    public PlayerCombatStateMachine playerCombatStateMachine;
     public Camera mainCam;
 
     [Header("Action Flags")]
@@ -48,6 +49,7 @@ public class PlayerManager : MonoBehaviour
 
         mainCam = Camera.main;
         playerMovementManager = GetComponent<PlayerMovementManager>();
+        playerCombatStateMachine = GetComponent<PlayerCombatStateMachine>();
     }
 
     // Start is called before the first frame update
@@ -66,7 +68,6 @@ public class PlayerManager : MonoBehaviour
     private void CheckGroundedState()
     {
         isGrounded = Physics.CheckSphere(transform.position + groundCheckOffset, groundCheckRadius, whatIsGround);
-            
     }
 
     public void IgnoreMyOwnColliders()
@@ -92,6 +93,17 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    #region Animation Events
+    public void IsPerformingAction()
+    {
+        isPerformingAction = true;
+    }
+
+    public void NotPerformingAction()
+    {
+        isPerformingAction = false;
+    }
+    #endregion
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;

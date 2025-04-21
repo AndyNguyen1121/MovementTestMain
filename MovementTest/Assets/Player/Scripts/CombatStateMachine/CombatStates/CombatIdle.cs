@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class CombatIdle : PlayerBaseState
 {
-    public CombatIdle(CombatStateFactory combatFactory, PlayerCombatStateMachine combatStateMachine) : base(combatFactory, combatStateMachine) { }
+    public CombatIdle(CombatStateFactory combatFactory, PlayerCombatStateMachine stateMachine) : base(combatFactory, stateMachine) { }
     public override void OnStateEnter()
     {
-        Debug.Log("Hello from idle state.");
+        
     }
     public override void OnStateUpdate()
     {
-
+        if (stateMachine.canAttack && PlayerInputManager.instance.attackPressed && !PlayerManager.instance.isPerformingAction)
+        {
+            Debug.Log("AttackPressed");
+            stateMachine.SwitchState(combatFactory.FistAttack1());
+        }
     }
     public override void OnStateExit()
     {

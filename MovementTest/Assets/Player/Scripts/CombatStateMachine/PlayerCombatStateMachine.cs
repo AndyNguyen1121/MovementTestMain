@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerCombatStateMachine : MonoBehaviour
 {
-    public CombatStateFactory combatFactory;
+    public bool canAttack = true;
 
+    public CombatStateFactory combatFactory;
     public PlayerBaseState currentState;
 
     private void Start()
@@ -22,5 +23,20 @@ public class PlayerCombatStateMachine : MonoBehaviour
     {
         currentState.OnStateExit();
         currentState = newState;
+        currentState.OnStateEnter();
     }
+
+    #region Animation Events
+    public void EnableAttackWindow()
+    {
+        canAttack = true;
+        PlayerManager.instance.isPerformingAction = false;
+    }
+
+    public void DisableAttackWindow() 
+    {
+        canAttack = false; 
+    }
+
+    #endregion
 }

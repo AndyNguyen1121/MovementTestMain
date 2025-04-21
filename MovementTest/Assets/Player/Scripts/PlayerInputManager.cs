@@ -24,6 +24,7 @@ public class PlayerInputManager : MonoBehaviour
     public bool isSprinting = false;
     public bool isInteracting = false;
     public bool jumpPressed = false;
+    public bool attackPressed = false;
 
     [Header("Input Queue")]
     public float defaultQueueTimer = 0.35f;
@@ -61,6 +62,8 @@ public class PlayerInputManager : MonoBehaviour
         HandleSprintingInput();
         HandleInteractInput();
         HandleJumpingInput();
+        HandleAttackInput();
+        HandleQueuedInputs();
     }
 
     private void OnEnable()
@@ -72,6 +75,7 @@ public class PlayerInputManager : MonoBehaviour
             inputActions.MovementMap.Movement.performed += ctx => movementDirection = ctx.ReadValue<Vector2>();
             inputActions.MovementMap.Sprint.performed += ctx => sprintPressed = true;
             inputActions.MovementMap.Sprint.canceled += ctx => sprintPressed = false;
+            inputActions.Actions.AttackQueue.performed += ctx => QueueInput(ref attackInputQueue);
 
         }
 
@@ -87,7 +91,6 @@ public class PlayerInputManager : MonoBehaviour
         inputActions.Disable();
         
     }
-
 
     private void HandleInteractInput()
     {
@@ -109,6 +112,10 @@ public class PlayerInputManager : MonoBehaviour
         {
             isSprinting = false;
         }
+    }
+    private void HandleAttackInput()
+    {
+        attackPressed = inputActions.Actions.Attack.WasPressedThisFrame();
     }
 
     private void HandleMovementInput()
@@ -159,5 +166,41 @@ public class PlayerInputManager : MonoBehaviour
         clampedDirection.y = clampedVertical;
     }
 
-    
+    private void QueueInput(ref bool queuedInput)
+    {
+        attackInputQueue = false;
+
+        if (playerManager.isPerformingAction)
+        {
+            queuedInput = true;
+            queueTimer = defaultQueueTimer;
+            queueIsActive = true;
+        }
+    }
+
+    private void ProcessQueuedInput()
+    {
+        if (attackInputQueue)
+        {
+            attackPressed = true;
+        }
+    }
+
+    private void HandleQueuedInputs()
+    {
+        if (queueIsActive)
+        {
+            if (queueTimer > 0)
+            {
+                queueTimer -= Time.deltaTime;
+                ProcessQueuedInput();
+            }
+            else
+            {
+                attackInputQueue = false;
+                queueIsActive = false;
+            }
+        }
+    }
+
 }

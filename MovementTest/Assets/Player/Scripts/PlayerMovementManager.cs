@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
 using UnityEngine.UIElements;
+using DG.Tweening;
 
 public class PlayerMovementManager : MonoBehaviour
 {
@@ -68,7 +69,7 @@ public class PlayerMovementManager : MonoBehaviour
     }
     public void HandleGroundedMovements()
     {
-        if (!canMove)
+        if (!canMove || !playerManager.characterController.enabled)
             return;
 
         if (!playerManager.animator.applyRootMotion && playerInputManager.movementDirection != Vector2.zero)
@@ -128,8 +129,10 @@ public class PlayerMovementManager : MonoBehaviour
             verticalVelocity.y += airGravityScale * Time.deltaTime;
         }
 
-        
-        playerManager.characterController.Move(verticalVelocity * Time.deltaTime);
+        if (playerManager.characterController.enabled)
+        {
+            playerManager.characterController.Move(verticalVelocity * Time.deltaTime);
+        }
 
 
         // Reset to origin state on landing
@@ -148,14 +151,14 @@ public class PlayerMovementManager : MonoBehaviour
         // Start jump loop if falling too long without jumping
         if (!playerManager.isGrounded && !isJumping && timeAboveGround > 0.2f && !fallingWithoutJump)
         {
-            playerManager.animator.CrossFade("JumpCycle", 0.1f);
+            playerManager.playerAnimationManager.PlayActionAnimation("Jump", true, false, false, true, true, true);
             fallingWithoutJump = true;  
         }
     }
 
     public void HandleJumping()
     {
-        if (playerManager.isGrounded && playerInputManager.jumpPressed)
+        if (!playerManager.isPerformingAction && playerManager.isGrounded && playerInputManager.jumpPressed)
         {
             playerManager.playerAnimationManager.PlayActionAnimation("JumpUp", true, false, false, true, true, true);
         }
@@ -188,51 +191,10 @@ public class PlayerMovementManager : MonoBehaviour
         }
     }
 
-    public IEnumerator MoveTowardsPosition(Vector3 position, Quaternion rotation, float duration)
+    public void MoveTowardsPosition(Vector3 position, Quaternion rotation, float duration)
     {
-        float timeElapsed = 0;
-
-        while (timeElapsed < duration)
-        {
-            Vector3 lerpedPosition = Vector3.Lerp(transform.position, position, timeElapsed / duration);
-
-            Vector3 deltaMovement = lerpedPosition - transform.position;
-            playerManager.characterController.Move(deltaMovement);
-
-            if (rotation != Quaternion.identity)
-            {
-                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, timeElapsed / duration);
-            }
-
-            timeElapsed += Time.deltaTime;
-
-            yield return null;
-        }
-
         playerManager.characterController.enabled = false;
-        transform.position = position;
-        playerManager.characterController.enabled = true;
-
-        if (rotation != Quaternion.identity)
-        {
-            transform.rotation = rotation;
-        }
+        transform.DOMove(position, duration).SetEase(Ease.OutSine).OnComplete( () => playerManager.characterController.enabled = true);
     }
 
-    public IEnumerator PushInDirection(Vector3 direction, float distance, float duration)
-    {
-        float timeElapsed = 0;
-        direction.Normalize();
-
-        float movementOverTime = distance / duration;
-
-        while (timeElapsed < duration)
-        {
-            playerManager.characterController.Move(direction * movementOverTime * Time.deltaTime);
-
-            timeElapsed += Time.deltaTime;
-
-            yield return null;
-        }
-    }
 }

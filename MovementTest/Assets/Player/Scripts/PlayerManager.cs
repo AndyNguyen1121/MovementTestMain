@@ -15,6 +15,7 @@ public class PlayerManager : MonoBehaviour
     [Header("Auto-Initizalized References")]
     public PlayerMovementManager playerMovementManager;
     public PlayerCombatStateMachine playerCombatStateMachine;
+    public PlayerHealthManager playerHealthManager;
     public Camera mainCam;
 
     [Header("Action Flags")]
@@ -50,12 +51,13 @@ public class PlayerManager : MonoBehaviour
         mainCam = Camera.main;
         playerMovementManager = GetComponent<PlayerMovementManager>();
         playerCombatStateMachine = GetComponent<PlayerCombatStateMachine>();
+        playerHealthManager = GetComponent<PlayerHealthManager>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        //IgnoreMyOwnColliders();
+        IgnoreMyOwnColliders();
     }
 
     // Update is called once per frame

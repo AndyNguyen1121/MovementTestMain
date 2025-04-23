@@ -151,7 +151,7 @@ public class PlayerMovementManager : MonoBehaviour
         // Start jump loop if falling too long without jumping
         if (!playerManager.isGrounded && !isJumping && timeAboveGround > 0.2f && !fallingWithoutJump)
         {
-            playerManager.playerAnimationManager.PlayActionAnimation("Jump", true, false, false, true, true, true);
+            playerManager.playerAnimationManager.PlayActionAnimation("JumpCycle", true, false, false, true, true, true);
             fallingWithoutJump = true;  
         }
     }

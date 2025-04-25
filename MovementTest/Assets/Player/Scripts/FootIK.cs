@@ -26,7 +26,8 @@ public class FootIK : MonoBehaviour
 
     public string leftFootAnimRotationName;
     public string rightFootAnimRotationName;
-    
+
+    public Transform hips;
 
     [Header("Raycast Settings")]
     public float raycastLength;
@@ -36,15 +37,14 @@ public class FootIK : MonoBehaviour
     [Header("Slope Detection")]
     public float slopeAngle;
     public float slopeRaycastLength;
-    public Transform hips;
     public bool onSlope = false;
     public Vector3 slopeDetectionOffset;
 
-    [Header("Toggle Settings")]
-    public float disableIkSpeed;
-    public float disableIkDuration;
-    public bool IKOff = false;
-    private Coroutine toggleAdjustmentCoroutine;
+    [Header("Step Detection")]
+    public float minStepHeightDistance;
+    public float stepRaycastLength;
+    public bool onSteps = false;
+    public Vector3 stepDetectionOffset;
 
     [Header("Movement Detection")]
     public float idleTime;
@@ -63,6 +63,7 @@ public class FootIK : MonoBehaviour
 
     private void Update()
     {
+        DetectSteps();
         DetectSlopes(ref slopeAngle);
         DetectIdleTime(ref idleTime);
         CheckIfCanFootIK();
@@ -75,11 +76,6 @@ public class FootIK : MonoBehaviour
         if (!enableFootIK)
         {
             lastPelvisYPos = hips.position.y;
-            //leftFootIKPos = animator.GetBoneTransform(HumanBodyBones.LeftFoot).position;
-            //lastLeftFootYPos = leftFootIKPos.y;
-
-            //rightFootIKPos = animator.GetBoneTransform(HumanBodyBones.RightFoot).position;
-            //lastRightFootYPos = rightFootIKPos.y;
         }
 
         AdjustFeetTarget(ref rightFootPosition, HumanBodyBones.RightFoot);
@@ -94,7 +90,7 @@ public class FootIK : MonoBehaviour
         FindValidIKPosition(rightFootPosition, HumanBodyBones.RightFoot, AvatarIKGoal.RightFoot, ref rightFootIKPos, ref rightFootRotation);
         FindValidIKPosition(leftFootPosition, HumanBodyBones.LeftFoot, AvatarIKGoal.LeftFoot, ref leftFootIKPos, ref leftFootRotation);
 
-        if (onSlope && idleTime < minimumTimeOnSlope)
+        if ((onSlope || onSteps) && idleTime < minimumTimeOnSlope)
         {
             lastPelvisYPos = animator.bodyPosition.y;
             return;
@@ -105,9 +101,6 @@ public class FootIK : MonoBehaviour
             return;
         }
 
-        
-
-        IKOff = false;
         AdjustPelvisPosition();
 
         animator.SetIKPositionWeight(AvatarIKGoal.LeftFoot, 1);
@@ -120,6 +113,7 @@ public class FootIK : MonoBehaviour
         MoveFeetToIkPoint(AvatarIKGoal.RightFoot, rightFootIKPos, ref lastRightFootYPos);
     }
 
+    #region Solver Methods
     private void MoveFeetToIkPoint(AvatarIKGoal foot, Vector3 positionIkHolder, ref float lastFootPositionY)
     {
         Vector3 footIKPos = animator.GetIKPosition(foot);
@@ -158,22 +152,7 @@ public class FootIK : MonoBehaviour
         animator.SetIKRotationWeight(foot, lerpedWeight);
     }
 
-    private void DetectSlopes(ref float slopeAngle)
-    {
-        RaycastHit hit;
-        if (Physics.Raycast(hips.position + slopeDetectionOffset, -transform.up, out hit, slopeRaycastLength, validLayerInteractions))
-        {
-            Vector3 planeVector = Vector3.ProjectOnPlane(-transform.up, hit.normal);
-            slopeAngle = Vector3.SignedAngle(planeVector, transform.up, transform.up);
-        }
-        else
-        {
-            slopeAngle = 0f;
-        }
-
-        onSlope = slopeAngle > 100 && slopeAngle != 0 ? true : false;
-    }
-
+    
     private void FindValidIKPosition(Vector3 footPosition, HumanBodyBones foot, AvatarIKGoal foot1, ref Vector3 feetIkPositions, ref Quaternion feetIkRotation)
     {
         footPosition.y += raycastDistanceAboveFoot;
@@ -244,8 +223,44 @@ public class FootIK : MonoBehaviour
         enableFootIK = animator.GetBool("FootIK");
     }
 
+    #endregion
+
+    #region Environment Detection
+    private void DetectSlopes(ref float slopeAngle)
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(hips.position + transform.rotation * slopeDetectionOffset, -transform.up, out hit, slopeRaycastLength, validLayerInteractions))
+        {
+            Vector3 planeVector = Vector3.ProjectOnPlane(-transform.up, hit.normal);
+            slopeAngle = Vector3.SignedAngle(planeVector, transform.up, transform.up);
+        }
+        else
+        {
+            slopeAngle = 0f;
+        }
+
+        onSlope = slopeAngle > 100 && slopeAngle != 0 ? true : false;
+    }
+
+    private void DetectSteps()
+    {
+        RaycastHit hit;
+
+        if (Physics.Raycast(hips.position + transform.rotation * stepDetectionOffset, -transform.up, out hit, stepRaycastLength, validLayerInteractions))
+        {
+            float stepHeight = transform.InverseTransformPoint(hit.point).y;
+            onSteps = Mathf.Abs(transform.position.y - hit.point.y) > minStepHeightDistance;
+        }
+        else
+        {
+            onSteps = false;
+        }
+    }
+
+    #endregion
     private void OnDrawGizmos()
     {
+
         Gizmos.color = Color.red;
 
         Gizmos.DrawWireSphere(rightFootPosition, 0.2f);
@@ -255,5 +270,8 @@ public class FootIK : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(rightFootIKPos, 0.2f);
         Gizmos.DrawWireSphere(leftFootIKPos, 0.2f);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawRay(hips.position + transform.rotation * stepDetectionOffset, -transform.up * stepRaycastLength);
     }
 }

@@ -8,7 +8,7 @@ public class FistAttack1 : PlayerBaseState
     public override void OnStateEnter()
     {
         //PlayerManager.instance.playerMovementManager.MoveTowardsPosition(stateMachine.transform.position + (stateMachine.transform.forward * 3), stateMachine.transform.rotation, 0.2f);
-        PlayerManager.instance.playerAnimationManager.PlayActionAnimation("LeftPunch", true, true, true, false, false, true);
+        PlayerManager.instance.playerAnimationManager.PlayActionAnimation("LeftPunch", true, true, true, false, false, true, 0.1f);
     }
     public override void OnStateUpdate()
     {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
 
+//[ExecuteAlways]
 public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager instance;
@@ -16,6 +17,7 @@ public class PlayerManager : MonoBehaviour
     public PlayerMovementManager playerMovementManager;
     public PlayerCombatStateMachine playerCombatStateMachine;
     public PlayerHealthManager playerHealthManager;
+    public PlayerAttackColliderManager playerAttackColliderManager;
     public Camera mainCam;
 
     [Header("Action Flags")]
@@ -36,7 +38,8 @@ public class PlayerManager : MonoBehaviour
 
     public Collider[] colliders;
 
-
+    [Header("Debug")]
+    public bool showDebug;
     private void Awake()
     {
         if (instance == null)
@@ -52,6 +55,7 @@ public class PlayerManager : MonoBehaviour
         playerMovementManager = GetComponent<PlayerMovementManager>();
         playerCombatStateMachine = GetComponent<PlayerCombatStateMachine>();
         playerHealthManager = GetComponent<PlayerHealthManager>();
+        playerAttackColliderManager = GetComponent<PlayerAttackColliderManager>();
     }
 
     // Start is called before the first frame update

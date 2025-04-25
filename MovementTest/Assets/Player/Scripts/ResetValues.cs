@@ -12,8 +12,8 @@ public class ResetValues : StateMachineBehaviour
     public bool useGravity;
     public bool applyRootMotion;
 
-    public float rootMotionSpeedXZ;
-    public float rootMotionSpeedY;
+    public float rootMotionSpeedXZ = 1f;
+    public float rootMotionSpeedY = 1f;
     public float defaultGravity = -9.81f;
     
 

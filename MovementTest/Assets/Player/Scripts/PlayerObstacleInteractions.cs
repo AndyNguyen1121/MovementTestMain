@@ -329,7 +329,8 @@ public class PlayerObstacleInteractions : MonoBehaviour
         
     }
     private void OnDrawGizmos()
-    {
+    { 
+
         if (startPos != Vector3.zero)
         {
             for (int i = 0; i < numOfSphereChecks; i++)

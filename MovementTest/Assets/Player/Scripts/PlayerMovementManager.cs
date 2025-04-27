@@ -160,7 +160,7 @@ public class PlayerMovementManager : MonoBehaviour
     {
         if (!playerManager.isPerformingAction && playerManager.isGrounded && playerInputManager.jumpPressed)
         {
-            playerManager.playerAnimationManager.PlayActionAnimation("JumpUp", true, false, false, true, true, true);
+            playerManager.playerAnimationManager.PlayActionAnimation("JumpUp", true, false, false, true, true, true, 0.05f);
         }
     }
 

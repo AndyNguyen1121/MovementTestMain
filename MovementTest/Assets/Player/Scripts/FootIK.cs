@@ -185,7 +185,7 @@ public class FootIK : MonoBehaviour
     {
         if (leftFootIKPos == Vector3.zero || rightFootIKPos == Vector3.zero || lastPelvisYPos == 0)
         {
-            lastPelvisYPos = animator.bodyPosition.y;
+            //lastPelvisYPos = animator.bodyPosition.y;
             return;
         }
 
@@ -193,8 +193,10 @@ public class FootIK : MonoBehaviour
         float rightFootOffset = rightFootIKPos.y - transform.position.y;
 
         float desiredOffset = leftFootOffset < rightFootOffset ? leftFootOffset : rightFootOffset;
-        
-        Vector3 desiredPos = animator.bodyPosition + (Vector3.up * desiredOffset);
+
+        // float desiredOffset = leftFootOffset + rightFootOffset / 2;
+
+        Vector3 desiredPos = animator.GetBoneTransform(HumanBodyBones.Hips).position + (Vector3.up * desiredOffset);
         desiredPos.y = Mathf.Lerp(lastPelvisYPos, desiredPos.y, pelvisAdjustmentSpeed * Time.deltaTime);
         animator.bodyPosition = desiredPos;
         lastPelvisYPos = desiredPos.y;

@@ -40,8 +40,6 @@ public class PlayerMovementManager : MonoBehaviour
     private float timeAboveGround;
     private bool fallingWithoutJump = false;
 
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -140,7 +138,7 @@ public class PlayerMovementManager : MonoBehaviour
         {
             isJumping = false;
             fallingWithoutJump = false;
-            playerManager.animator.CrossFade("MovementBlend", 0.1f);
+            playerManager.animator.CrossFade("Idle", 0.1f);
         }
 
 

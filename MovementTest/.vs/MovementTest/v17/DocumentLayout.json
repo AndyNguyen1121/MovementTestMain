@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|E:\\Unity Projects\\MovementTestMain\\MovementTest\\assets\\player\\scripts\\footik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|e:\\unity projects\\movementtestmain\\movementtest\\assets\\player\\scripts\\footik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\scripts\\footik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|e:\\unity projects\\movementtestmain\\movementtest\\assets\\player\\scripts\\playermovementmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|E:\\Unity Projects\\MovementTestMain\\MovementTest\\assets\\player\\scripts\\playermovementmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\scripts\\playermovementmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -238,8 +238,7 @@
               "RelativeToolTip": "Assets\\Player\\Scripts\\PlayerMovementManager.cs",
               "ViewState": "AQIAAIgAAAAAAAAAAAAhwKIAAAB6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T04:59:34.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-20T04:59:34.504Z"
             },
             {
               "$type": "Document",
@@ -249,7 +248,7 @@
               "RelativeDocumentMoniker": "Assets\\Player\\Scripts\\FootIK.cs",
               "ToolTip": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Player\\Scripts\\FootIK.cs",
               "RelativeToolTip": "Assets\\Player\\Scripts\\FootIK.cs",
-              "ViewState": "AQIAAL4AAAAAAAAAAAAqwNEAAAASAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwFAAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-21T00:43:44.913Z",
               "EditorCaption": ""

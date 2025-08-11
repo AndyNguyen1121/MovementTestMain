@@ -60,8 +60,8 @@ public class NewFootIk : MonoBehaviour
             Transform leftFoot = animator.GetBoneTransform(HumanBodyBones.LeftFoot);
             Transform rightFoot = animator.GetBoneTransform(HumanBodyBones.RightFoot);
 
-            initialLeftFootRotation = leftFoot.localRotation;
-            initialRightFootRotation = rightFoot.localRotation;
+            initialLeftFootRotation = leftFoot.rotation;
+            initialRightFootRotation = rightFoot.rotation;
 
             leftFootUpDir = leftFoot.up;
             rightFootUpDir = rightFoot.up;
@@ -132,14 +132,21 @@ public class NewFootIk : MonoBehaviour
 
         if (hit.normal != Vector3.zero)
         {
-            // Use footPosition (the IK foot transform) current forward
+            /*// Use footPosition (the IK foot transform) current forward
             Vector3 forward = footPosition.forward;
 
             // Project onto slope plane defined by hit.normal
             forward = Vector3.ProjectOnPlane(forward, hit.normal).normalized;
 
             // Create rotation looking forward with up aligned to slope normal
-            targetRotation = Quaternion.LookRotation(forward, hit.normal);
+            targetRotation = Quaternion.LookRotation(forward, hit.normal);*/
+
+            Vector3 rotAxis = Vector3.Cross(Vector3.up, hit.normal);
+            float angle = Vector3.Angle(Vector3.up, hit.normal);
+            Quaternion rot = Quaternion.AngleAxis(angle, rotAxis);
+            targetRotation = rot;
+
+
         }
 
         Debug.DrawRay(footPosition.position + adjustedFootOffsetDirection, Vector3.down * rayLength);
@@ -153,7 +160,7 @@ public class NewFootIk : MonoBehaviour
             Vector3 localSpaceDesiredPos = transform.InverseTransformPoint(desiredPos);
             footPos = transform.InverseTransformPoint(footPos);
 
-            float footYPos = Mathf.Lerp(lastYPos, localSpaceDesiredPos.y, footLerpSpeed);
+            float footYPos = Mathf.Lerp(lastYPos, localSpaceDesiredPos.y, footLerpSpeed * Time.deltaTime);
 
             lastYPos = footYPos;
             footPos.y += footYPos;
@@ -179,7 +186,7 @@ public class NewFootIk : MonoBehaviour
 
         }
 
-        animator.SetIKRotation(foot, desiredRotation);
+        animator.SetIKRotation(foot, desiredRotation * animator.GetIKRotation(foot));
     }
 
     private void MovePelvis(ref float lastPelvisY)

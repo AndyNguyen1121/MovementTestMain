@@ -24,16 +24,13 @@ public class NewFootIk : MonoBehaviour
     public Vector3 leftFootIKPosition;
 
     [Header("Foot Rotations")]
-    public Quaternion initialLeftFootRotation;
-    public Quaternion initialRightFootRotation;
     public Quaternion rightFootTargetRotation, rightFootLastRotation;
     public Quaternion leftFootTargetRotation, leftFootLastRotation;
-    public Vector3 leftFootUpDir;
-    public Vector3 rightFootUpDir;
 
     [Header("Lerp Settings")]
     public float footLerpSpeed = 7f;
     public float pelvisLerpSpeed = 9f;
+    public float rotationSpeed = 5f;
 
     public LayerMask stairLayer;
 
@@ -42,41 +39,6 @@ public class NewFootIk : MonoBehaviour
     {
         playerManager = PlayerManager.instance;
         animator = GetComponent<Animator>();
-
-        AnimationClip idleClip = null;
-        foreach (AnimationClip clip in animator.runtimeAnimatorController.animationClips)
-        {
-            if (clip.name == "Idle")
-            {
-                idleClip = clip;
-                break;
-            }
-        }
-
-        if (idleClip != null)
-        {
-            idleClip.SampleAnimation(animator.gameObject, 0f);
-
-            Transform leftFoot = animator.GetBoneTransform(HumanBodyBones.LeftFoot);
-            Transform rightFoot = animator.GetBoneTransform(HumanBodyBones.RightFoot);
-
-            initialLeftFootRotation = leftFoot.rotation;
-            initialRightFootRotation = rightFoot.rotation;
-
-            leftFootUpDir = leftFoot.up;
-            rightFootUpDir = rightFoot.up;
-
-            leftFootLastRotation = initialLeftFootRotation;
-            rightFootLastRotation = initialRightFootRotation;
-        }
-
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnAnimatorIK(int layerIndex)
@@ -85,16 +47,19 @@ public class NewFootIk : MonoBehaviour
         {
             MovePelvis(ref lastPelvisY);
 
-            leftFootIKPosition = animator.GetBoneTransform(HumanBodyBones.LeftFoot).position;
-            rightFootIKPosition = animator.GetBoneTransform(HumanBodyBones.RightFoot).position;
+            //leftFootIKPosition = animator.GetBoneTransform(HumanBodyBones.LeftFoot).position;
+            //rightFootIKPosition = animator.GetBoneTransform(HumanBodyBones.RightFoot).position;
+            leftFootIKPosition = animator.GetIKPosition(AvatarIKGoal.LeftFoot);
+            rightFootIKPosition = animator.GetIKPosition(AvatarIKGoal.RightFoot);
+
 
             lastRightFootY = transform.InverseTransformPoint(rightFootIKPosition).y;
             lastLeftFootY = transform.InverseTransformPoint(leftFootIKPosition).y;
             return;
         }
 
-        FindIkPosition(animator.GetBoneTransform(HumanBodyBones.LeftFoot), ref leftFootIKPosition, ref leftFootY, ref leftFootTargetRotation, initialLeftFootRotation, leftFootUpDir);
-        FindIkPosition(animator.GetBoneTransform(HumanBodyBones.RightFoot), ref rightFootIKPosition, ref rightFootY, ref rightFootTargetRotation, initialRightFootRotation, rightFootUpDir);
+        FindIkPosition(animator.GetBoneTransform(HumanBodyBones.LeftFoot), ref leftFootIKPosition, ref leftFootY, ref leftFootTargetRotation);
+        FindIkPosition(animator.GetBoneTransform(HumanBodyBones.RightFoot), ref rightFootIKPosition, ref rightFootY, ref rightFootTargetRotation);
 
         animator.SetIKPositionWeight(AvatarIKGoal.LeftFoot, 1);
         animator.SetIKPositionWeight(AvatarIKGoal.RightFoot, 1);
@@ -105,13 +70,13 @@ public class NewFootIk : MonoBehaviour
         MoveFootIk(AvatarIKGoal.LeftFoot, leftFootIKPosition, ref lastLeftFootY);
         MoveFootIk(AvatarIKGoal.RightFoot, rightFootIKPosition, ref lastRightFootY);
 
-        RotateFoot(AvatarIKGoal.LeftFoot, leftFootTargetRotation, initialLeftFootRotation, ref leftFootLastRotation);
-        RotateFoot(AvatarIKGoal.RightFoot, rightFootTargetRotation, initialRightFootRotation, ref rightFootLastRotation);
+        RotateFoot(AvatarIKGoal.LeftFoot, leftFootTargetRotation, ref leftFootLastRotation);
+        RotateFoot(AvatarIKGoal.RightFoot, rightFootTargetRotation, ref rightFootLastRotation);
 
         MovePelvis(ref lastPelvisY);
     }
 
-    private void FindIkPosition(Transform footPosition, ref Vector3 ikWorldPos, ref float desiredYPos, ref Quaternion targetRotation, Quaternion initalRotation, Vector3 footUpDir)
+    private void FindIkPosition(Transform footPosition, ref Vector3 ikWorldPos, ref float desiredYPos, ref Quaternion targetRotation)
     {
         RaycastHit hit;
         Vector3 adjustedFootOffsetDirection = footPosition.right * rayOffset.x + Vector3.up * rayOffset.y;
@@ -132,21 +97,10 @@ public class NewFootIk : MonoBehaviour
 
         if (hit.normal != Vector3.zero)
         {
-            /*// Use footPosition (the IK foot transform) current forward
-            Vector3 forward = footPosition.forward;
-
-            // Project onto slope plane defined by hit.normal
-            forward = Vector3.ProjectOnPlane(forward, hit.normal).normalized;
-
-            // Create rotation looking forward with up aligned to slope normal
-            targetRotation = Quaternion.LookRotation(forward, hit.normal);*/
-
             Vector3 rotAxis = Vector3.Cross(Vector3.up, hit.normal);
             float angle = Vector3.Angle(Vector3.up, hit.normal);
             Quaternion rot = Quaternion.AngleAxis(angle, rotAxis);
             targetRotation = rot;
-
-
         }
 
         Debug.DrawRay(footPosition.position + adjustedFootOffsetDirection, Vector3.down * rayLength);
@@ -170,23 +124,15 @@ public class NewFootIk : MonoBehaviour
         animator.SetIKPosition(foot, footPos);
     }
 
-    private void RotateFoot(AvatarIKGoal foot, Quaternion desiredRotation, Quaternion initialRotation, ref Quaternion lastRotation)
+    private void RotateFoot(AvatarIKGoal foot, Quaternion desiredRotation, ref Quaternion lastRotation)
     {
         if (Quaternion.Angle(lastRotation, desiredRotation) > 0.01f)
         {
-            Quaternion deltaRotation = desiredRotation * Quaternion.Inverse(initialRotation);
-
-            float step = Time.deltaTime * 5f; 
-            Quaternion partialRotation = Quaternion.Slerp(Quaternion.identity, deltaRotation, step);
-
-            lastRotation = partialRotation * lastRotation;
-
-            
-            
-
+            Quaternion partialRotation = Quaternion.Slerp(Quaternion.identity, desiredRotation, rotationSpeed * Time.deltaTime);
+            lastRotation = partialRotation;
         }
 
-        animator.SetIKRotation(foot, desiredRotation * animator.GetIKRotation(foot));
+        animator.SetIKRotation(foot, lastRotation * animator.GetIKRotation(foot));
     }
 
     private void MovePelvis(ref float lastPelvisY)

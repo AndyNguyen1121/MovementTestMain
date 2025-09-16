@@ -1,6 +1,6 @@
 1. Ensure character is Humanoid and add animator
 
-2. Enable IK pass and on animation layer
+2. Enable IK pass on animation layer
 
 3. Add animations such as walking/idle and enable Foot IK
 

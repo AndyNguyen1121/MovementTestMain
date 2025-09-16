@@ -10,7 +10,7 @@ public class NewFootIk : MonoBehaviour
     [Header("Foot Raycast")]
     public float rayLength;
     public Vector3 rayOffset;
-    public Vector3 footYOffset;
+    public Vector3 footOffset;
 
     private float rightFootY;
     private float leftFootY;
@@ -98,13 +98,13 @@ public class NewFootIk : MonoBehaviour
         adjustedFootOffsetDirection += footForwardDir * rayOffset.z;
         if (Physics.Raycast(footPosition.position + adjustedFootOffsetDirection, Vector3.down, out hit, rayLength, stairLayer))
         {
-            desiredYPos = hit.point.y + footYOffset.y;
-            ikWorldPos = hit.point + footYOffset;
+            desiredYPos = hit.point.y + footOffset.y;
+            ikWorldPos = hit.point + footOffset;
         }
         else if (Physics.Raycast(footPosition.position + adjustedFootOffsetDirection, Vector3.down, out hit, rayLength, groundLayer))
         {
-            desiredYPos = hit.point.y + footYOffset.y;
-            ikWorldPos = hit.point + footYOffset;
+            desiredYPos = hit.point.y + footOffset.y;
+            ikWorldPos = hit.point + footOffset;
         }
 
         if (hit.normal != Vector3.zero)

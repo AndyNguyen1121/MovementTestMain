@@ -1,10 +1,10 @@
 1. Ensure character is Humanoid and add animator
 
-2. Enable IK pass and on animation layer
+2. Enable IK pass on animation layer. Add a bool "FootIK" to parameters
 
-3. Add animations such as walking/idle and enable Foot IK
+3. Add animations such as walking/idle 
 
-4. Attach "EnableFootIKInAnimation.cs" in animation behavior
+4. Attach "EnableFootIKInAnimation.cs" in the animation behavior to the animations that you want to apply FootIK to
 
 5. Attach "NewFootIk.cs" to the object with the animator and adjust settings
    - Assign ground layer

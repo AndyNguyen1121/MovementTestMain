@@ -60,10 +60,10 @@ public class PlayerInputManager : MonoBehaviour
     {
         HandleMovementInput();
         HandleSprintingInput();
-        HandleInteractInput();
+       /* HandleInteractInput();
         HandleJumpingInput();
         HandleAttackInput();
-        HandleQueuedInputs();
+        HandleQueuedInputs();*/
     }
 
     private void OnEnable()
@@ -80,15 +80,15 @@ public class PlayerInputManager : MonoBehaviour
         }
 
         inputActions.Enable();
-        cameraInputProvider.enabled = true;
+        //cameraInputProvider.enabled = true;
     }
 
     private void OnDisable()
     {
-        movementDirection = Vector2.zero;
+        /*movementDirection = Vector2.zero;
         playerManager.playerAnimationManager.UpdateAnimationMovementParameters(0, 0, 0);
         cameraInputProvider.enabled = false;
-        inputActions.Disable();
+        inputActions.Disable();*/
         
     }
 

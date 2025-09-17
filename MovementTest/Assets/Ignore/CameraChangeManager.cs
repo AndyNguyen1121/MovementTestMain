@@ -1,6 +1,7 @@
 using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,7 @@ public class CameraChangeManager : MonoBehaviour
     public Button nextButton;
     public Button prevButton;
 
+    public GameObject wasdText;
     private void Start()
     {
         currentCameraIndex = 0;
@@ -43,9 +45,11 @@ public class CameraChangeManager : MonoBehaviour
         if (currentCameraIndex == cameras.Count - 1)
         {
             nextButton.interactable = false;
+            wasdText.SetActive(true);
         }
         else
         {
+            wasdText.SetActive(false);
             nextButton.interactable = true;  
         }
     }

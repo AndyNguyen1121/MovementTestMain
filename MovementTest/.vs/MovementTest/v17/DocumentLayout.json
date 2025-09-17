@@ -5,6 +5,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|e:\\unity projects\\movementtestmain\\movementtest\\assets\\footik\\newfootik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|solutionrelative:assets\\footik\\newfootik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|e:\\unity projects\\movementtestmain\\movementtest\\assets\\ignore\\updateskinnedmeshwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|solutionrelative:assets\\ignore\\updateskinnedmeshwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|e:\\unity projects\\movementtestmain\\movementtest\\assets\\ignore\\player\\scripts\\footik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8AF865E-69FB-9255-07CF-51156DDFF349}|Assembly-CSharp.csproj|solutionrelative:assets\\ignore\\player\\scripts\\footik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 511,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,13 +42,39 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FootIK.cs",
+              "DocumentMoniker": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Ignore\\Player\\Scripts\\FootIK.cs",
+              "RelativeDocumentMoniker": "Assets\\Ignore\\Player\\Scripts\\FootIK.cs",
+              "ToolTip": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Ignore\\Player\\Scripts\\FootIK.cs",
+              "RelativeToolTip": "Assets\\Ignore\\Player\\Scripts\\FootIK.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAQAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T05:28:29.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UpdateSkinnedMeshWindow.cs",
+              "DocumentMoniker": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Ignore\\UpdateSkinnedMeshWindow.cs",
+              "RelativeDocumentMoniker": "Assets\\Ignore\\UpdateSkinnedMeshWindow.cs",
+              "ToolTip": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\Ignore\\UpdateSkinnedMeshWindow.cs",
+              "RelativeToolTip": "Assets\\Ignore\\UpdateSkinnedMeshWindow.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAYwE8AAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T05:28:21.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "NewFootIk.cs",
               "DocumentMoniker": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\FootIK\\NewFootIk.cs",
               "RelativeDocumentMoniker": "Assets\\FootIK\\NewFootIk.cs",
               "ToolTip": "E:\\Unity Projects\\MovementTestMain\\MovementTest\\Assets\\FootIK\\NewFootIk.cs",
               "RelativeToolTip": "Assets\\FootIK\\NewFootIk.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAkAAAA",
+              "ViewState": "AQIAAHMAAAAAAAAAAAAkwJIAAABWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-16T05:17:37.272Z",
               "EditorCaption": ""

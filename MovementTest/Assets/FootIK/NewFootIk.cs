@@ -140,10 +140,14 @@ public class NewFootIk : MonoBehaviour
 
     private void RotateFoot(AvatarIKGoal foot, Quaternion desiredRotation, ref Quaternion lastRotation)
     {
-        if (Quaternion.Angle(lastRotation, desiredRotation) > 0.01f)
+        if (Quaternion.Angle(lastRotation, desiredRotation) > 1f)
         {
             Quaternion partialRotation = Quaternion.Slerp(Quaternion.identity, desiredRotation, rotationSpeed * Time.deltaTime);
             lastRotation = partialRotation;
+        }
+        else
+        {
+            lastRotation = desiredRotation;
         }
 
         animator.SetIKRotation(foot, lastRotation * animator.GetIKRotation(foot));

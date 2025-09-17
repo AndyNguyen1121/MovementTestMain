@@ -921,7 +921,7 @@ MonoBehaviour:
   canRotate: 0
   useGravity: 1
   applyRootMotion: 1
-  rootMotionSpeedXZ: 1
+  rootMotionSpeedXZ: 0.5
   rootMotionSpeedY: 0
   defaultGravity: -9.81
 --- !u!114 &4974905788915220335
